@@ -11,6 +11,10 @@
   },
   "author": "David Gilbertson",
   "license": "MIT",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/davidgilbertson/easy-ease"
+  },
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "6.26.0",
