@@ -1,9 +1,14 @@
-# easy-ease
+# Easy Ease
+Install: `npm install easy-ease`
+
+A tiny easing package (< 0.5 KB) with no dependencies
 
 Check out the codepen https://codepen.io/davidgilbertson/pen/GyrZNz
 
 # Usage
 ```js
+import ease from 'easy-ease';
+
 ease({
   startValue: 0, // optional, default is 0
   endValue: 100, // optional, default is 1

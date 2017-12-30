@@ -1,6 +1,6 @@
 {
   "name": "easy-ease",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny easing package (< 0.5 KB) with no dependencies",
   "main": "lib/easyEase.js",
   "scripts": {
