@@ -2,15 +2,23 @@
   "name": "easy-ease",
   "version": "1.0.1",
   "description": "A tiny easing package (< 0.5 KB) with no dependencies",
+  "keywords": [
+    "animation",
+    "ease",
+    "easing",
+    "tween"
+  ],
   "main": "lib/easyEase.js",
   "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npm run transpile && npm run minify && npm test",
     "test": "node test/test.js",
     "transpile": "babel src -d lib",
-    "minify": "uglifyjs lib/easyEase.js --compress --mangle --source-map --output lib/easyEase.min.js",
-    "build": "npm run transpile && npm run minify && npm test"
+    "minify": "uglifyjs lib/easyEase.js --compress --mangle --source-map --output lib/easyEase.min.js"
   },
   "author": "David Gilbertson",
   "license": "MIT",
+  "bugs" : "https://github.com/davidgilbertson/easy-ease/issues",
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/davidgilbertson/easy-ease"
