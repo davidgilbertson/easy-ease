@@ -1,11 +1,11 @@
 # Easy Ease
-Install: `npm install easy-ease`
+A tiny easing package (< 0.5 KB) with no dependencies.
 
-A tiny easing package (< 0.5 KB) with no dependencies
-
-Check out the codepen https://codepen.io/davidgilbertson/pen/GyrZNz
+Play with me on codepen https://codepen.io/davidgilbertson/pen/GyrZNz
 
 # Usage
+Install: `npm install easy-ease`
+
 ```js
 import ease from 'easy-ease';
 
