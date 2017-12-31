@@ -26,7 +26,7 @@ ease({
     window.scroll(0, value);
   },
   onComplete: () => {
-    console.warn('TODO: focus element at top of page for screen readers');
+    // do something when at the top of the page
   }
 });
 ```
