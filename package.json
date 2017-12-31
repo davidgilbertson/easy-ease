@@ -1,6 +1,6 @@
 {
   "name": "easy-ease",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tiny easing package (< 0.5 KB) with no dependencies",
   "keywords": [
     "animation",
@@ -18,10 +18,10 @@
   },
   "author": "David Gilbertson",
   "license": "MIT",
-  "bugs" : "https://github.com/davidgilbertson/easy-ease/issues",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/davidgilbertson/easy-ease"
+  "bugs": "https://github.com/davidgilbertson/easy-ease/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidgilbertson/easy-ease"
   },
   "dependencies": {},
   "devDependencies": {
