@@ -5,6 +5,7 @@ function ease({
   onStep,
   onComplete = () => {},
 }) {
+  const raf = requestAnimationFrame || (func => setTimeout(func, 16));
   const stepCount = durationMs / 16;
   const valueIncrement = (endValue - startValue) / stepCount;
   const sinValueIncrement = Math.PI / stepCount;
@@ -17,14 +18,14 @@ function ease({
 
     if (currentSinValue < Math.PI) {
       onStep(currentValue);
-      window.requestAnimationFrame(step);
+      raf(step);
     } else {
       onStep(endValue);
       onComplete();
     }
   }
 
-  window.requestAnimationFrame(step);
+  raf(step);
 }
 
 export default ease;
