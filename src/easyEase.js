@@ -5,7 +5,7 @@ function ease({
   onStep,
   onComplete = () => {},
 }) {
-  const raf = requestAnimationFrame || (func => setTimeout(func, 16));
+  const raf = window.requestAnimationFrame || (func => window.setTimeout(func, 16));
   const stepCount = durationMs / 16;
   const valueIncrement = (endValue - startValue) / stepCount;
   const sinValueIncrement = Math.PI / stepCount;
