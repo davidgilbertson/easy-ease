@@ -1,10 +1,10 @@
 # Easy Ease
-A tiny easing package (< 0.4 KB) with no dependencies. For doing stuff like:
+A tiny easing package (~0.2 KB gzipped) with no dependencies. For doing stuff like:
 * Scrolling smoothly to the top of the page
 * Sliding out a navigation menu
 * Sliding open an accordion component
 
-There are no options for different types of easing. What you get is a nice ease-in-out 
+You won't find any options for different types of easing here. What you get is a nice ease-in-out 
 similar to the default animation for `transition` in CSS.
 
 If you'd prefer to choose from the full suite of 

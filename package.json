@@ -1,7 +1,7 @@
 {
   "name": "easy-ease",
   "version": "1.0.8",
-  "description": "A tiny easing package (< 0.5 KB) with no dependencies",
+  "description": "A tiny easing package with no dependencies",
   "keywords": [
     "animation",
     "ease",
