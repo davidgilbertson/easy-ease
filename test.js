@@ -1,11 +1,16 @@
 const assert = require('assert');
-const ease = require('../lib/easyEase').default;
+const ease = require('./index');
 
 let rafCalls = 0;
+let setTimeoutCalls = 0;
 
 global.window = {
   requestAnimationFrame: func => {
     rafCalls++;
+    func();
+  },
+  setTimeout: func => {
+    setTimeoutCalls++;
     func();
   }
 };
@@ -21,9 +26,44 @@ function it(desc, func) {
 
     console.info(`✓ "${desc}" passed.`);
   } catch (err) {
-    console.error(`✘ "${desc}" failed. Expected ${result.actual} to be ${result.expected}`);
+    if (result) {
+      console.error(`✘ "${desc}" failed. Expected ${result.actual} to be ${result.expected}`);
+    } else {
+      console.error(`✘ "${desc}" failed. No result was returned`);
+    }
   }
 }
+
+it('should use requestAnimationFrame when available', () => {
+  ease({
+    durationMs: 160,
+    onStep: () => {}
+  });
+
+  return {
+    actual: rafCalls, // should be calling raf
+    expected: 10,
+    test: assert.equal,
+  };
+});
+
+it('should polyfill requestAnimationFrame', () => {
+  const originalRaf = window.requestAnimationFrame;
+  delete window.requestAnimationFrame;
+
+  ease({
+    durationMs: 160,
+    onStep: () => {}
+  });
+
+  window.requestAnimationFrame = originalRaf;
+
+  return {
+    actual: setTimeoutCalls, // should be calling setTimeout
+    expected: 10,
+    test: assert.equal,
+  };
+});
 
 it('should apply a default start value', () => {
   let startValue = null;
