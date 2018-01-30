@@ -1,5 +1,5 @@
 # Easy Ease
-A tiny easing package (< 0.5 KB) with no dependencies. For doing stuff like:
+A tiny easing package (< 0.4 KB) with no dependencies. For doing stuff like:
 * Scrolling smoothly to the top of the page
 * Sliding out a navigation menu
 * Sliding open an accordion component
