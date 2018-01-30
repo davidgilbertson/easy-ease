@@ -8,13 +8,9 @@
     "easing",
     "tween"
   ],
-  "main": "lib/easyEase.js",
+  "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm run build",
-    "build": "npm run transpile && npm run minify && npm test",
-    "test": "node test/test.js",
-    "transpile": "babel src -d lib",
-    "minify": "uglifyjs lib/easyEase.js --compress --mangle --source-map --output lib/easyEase.min.js"
+    "test": "node test.js"
   },
   "author": "David Gilbertson",
   "license": "MIT",
@@ -24,17 +20,5 @@
     "url": "https://github.com/davidgilbertson/easy-ease"
   },
   "dependencies": {},
-  "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-preset-env": "1.6.1",
-    "uglify-js": "3.3.2"
-  },
-  "files": [
-    "lib/"
-  ],
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  }
+  "devDependencies": {}
 }
