@@ -1,6 +1,6 @@
 function ease(options) {
   var startValue = options.startValue || 0;
-  var endValue = options.endValue || 1;
+  var endValue = options.endValue || 0;
   var durationMs = options.durationMs || 200;
   var onComplete = options.onComplete || function() {};
 
