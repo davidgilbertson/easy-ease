@@ -1,12 +1,15 @@
+var raf = typeof window !== 'undefined' && 'requestAnimationFrame' in window
+  ? window.requestAnimationFrame
+  : function(func) {
+    setTimeout(func, 16)
+  };
+
 function ease(options) {
-  var startValue = options.startValue || 0;
-  var endValue = options.endValue || 1;
-  var durationMs = options.durationMs || 200;
+  var startValue = 'startValue' in options ? options.startValue : 0;
+  var endValue = 'endValue' in options ? options.endValue : 1;
+  var durationMs = 'durationMs' in options ? options.durationMs : 200;
   var onComplete = options.onComplete || function() {};
 
-  var raf = window.requestAnimationFrame || function(func) {
-    window.setTimeout(func, 16)
-  };
   var stepCount = durationMs / 16;
   var valueIncrement = (endValue - startValue) / stepCount;
   var sinValueIncrement = Math.PI / stepCount;
