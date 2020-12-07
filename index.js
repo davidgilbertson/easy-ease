@@ -11,14 +11,14 @@ function ease(options) {
   var onComplete = options.onComplete || function() {};
 
   var stepCount = durationMs / 16;
-  var valueIncrement = (endValue - startValue) / stepCount;
+  var valueIncrement = (endValue - startValue) / stepCount * 2;
   var sinValueIncrement = Math.PI / stepCount;
   var currentValue = startValue;
   var currentSinValue = 0;
 
   function step() {
     currentSinValue += sinValueIncrement;
-    currentValue += valueIncrement * Math.pow(Math.sin(currentSinValue), 2) * 2;
+    currentValue += valueIncrement * Math.pow(Math.sin(currentSinValue), 2);
 
     if (currentSinValue < Math.PI) {
       options.onStep(currentValue);
